@@ -14,16 +14,17 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    int n;
-    cin >> n;
-    int a, b, c, d;
-    cin >> a >> b >>c >> d;
+    int x, y, z;
+    cin >> x >> y >> z;
 
-    int Max = a;
-    if( b > Max ) Max= b;
-    if(c > Max) Max = c;
-    if(d > Max) Max = d;
-    cout << Max << endl;
+    if(x > 3){
+        if( x % 3 != 0) cout<< (x * y) + ((x/3) * z) << endl;
+        else cout<< (x * y) + ((x/3) * z) - z<< endl;
+        
+    }
+    else{
+        cout << x * y << endl;
+    }
 }
 
 int main() {
@@ -38,3 +39,5 @@ int main() {
     
     return 0;
 }
+
+
