@@ -14,14 +14,17 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    int p, q;
-    cin >> p >> q;
-    
-    int serv = (p + q) / 2 ;
-
-    if(serv % 2 == 0) cout << "Alice" << endl;
-    else cout << "Bob" << endl;
-  }
+         int a,b,x,y;
+	    cin>>a>>b>>x>>y;
+	    if(a>=b){
+	        if((a-b)<=y){cout<<"YES"<<endl;}
+	        else {cout<<"NO"<<endl;}
+	    }
+	    else {
+	        if((b-a)<=x){cout<<"YES"<<endl;}
+	        else {cout<<"NO"<<endl;}
+	    }   
+}
 
 int main() {
     ios::sync_with_stdio(false);
