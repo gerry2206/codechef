@@ -14,24 +14,11 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    int x, y, m, n;
-    cin >> x >> y;
+    int a,b, c;
+    cin >> a >> b >> c;
     
-	    
-	    m=(500-(2*x))+(1000-(4*(x+y)));
-	    
-	    n=(500-(4*y))+(1000-(2*(x+y)));
-	    
-	    if(m>n)
-	    {
-	        cout<<"\n"<<m;
-	    }
-	    
-	    else
-	    {
-	        cout<<"\n"<<n;
-	    }
-   }
+    
+}
 
 int main() {
     ios::sync_with_stdio(false);
