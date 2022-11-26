@@ -14,15 +14,13 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    int s = 3;
-    int ar[s];
+    int n, x, p;
+    cin >> n >> x >> p;
 
-    for(int i = 0 ; i< s; ++i){
-        cin >> ar[i];
-    }
+    int mk_ob =  x * 3 - (n - x);
 
-    sort(ar, ar+3);
-    cout << ar[1] << endl;
+    if(mk_ob >= p) cout << "PASS" << endl;
+    else cout << "FAIL" << endl;
 }
 
 int main() {
