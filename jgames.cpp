@@ -14,9 +14,7 @@ void solve() {
     cin >> x >> y;
 
     if( x % 2 == 0 && y % 2 == 0 ) cout << "Janmansh" << endl;
-    else cout << "Jay" << endl;
-
-    if( x % 2 != 0 && y % 2 != 0) cout << "Janmansh" << endl;
+    else if( x % 2 != 0 && y % 2 != 0) cout << "Janmansh" << endl;
     else cout << "Jay" << endl;
 }
 
@@ -32,3 +30,4 @@ int main() {
     
     return 0;
 }
+
