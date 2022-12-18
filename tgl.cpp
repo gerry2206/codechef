@@ -5,34 +5,41 @@ using namespace std;
 #define endl "\n"
 #define forn for(int i= 0; i<n; ++i)
 #define fornn for(int i=0; i<= n; ++i)
+#define pb push_back
+#define pp pop_back
 // Gobardhan Meher
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+void solve() {
+        int n, k;
+        cin >> n >> k;
+        int arr[n];
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+        int index = 0;
+        while (index < n - 1 && k > 0) {
+            if (arr[index] > 0) {
+                arr[index]--;
+                arr[n - 1]++;
+                k--;
+            } else {
+                index++;
+            }
+        }
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << " ";
+        cout << endl;
+}
 
-    int t;
-    cin >> t;
-    int smax = 0, fmax = 0;
-    int ftot = 0, stot = 0;
-    while(t--){
-        int first, second;
-    cin >> first >> second;
-    ftot += first;
-    stot += second;
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int tc = 1;
+    cin >> tc;
+    for(int i = 1; i <= tc; i++) {
+        solve();
+    }
     
-    if(ftot > stot){
-        int diff = ftot - stot;
-        if(diff > fmax) fmax = diff;
-    }
-    else{
-        int difff = stot - ftot;
-        if(difff > smax) smax = difff;
-    }
-    }
-    if(fmax > smax) cout << "1" << " ";
-    else cout << "2" << " ";
-
-    if(fmax > smax) cout << fmax;
-    else cout << smax ;
+    return 0;
 }
